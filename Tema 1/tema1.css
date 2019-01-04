@@ -1,0 +1,146 @@
+/****************************************************
+CSS Reset
+***************************************************/
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/************************************************8
+Base Rules
+*************************************************/
+body{
+    font-family: 'open sans';
+    color: rgb(150, 78, 78);
+
+}
+h1{
+    font-size: 20px;
+    font-weight: 400;
+    font-style: italic;
+    
+}
+h1::after{
+    content: '';
+    display: block;
+    width: 45px;
+    height: 2px;
+    border-bottom: 2px solid;
+    margin-left: 47%;
+}   
+p{
+    font-size: 18px;
+    font-weight: 300;
+    color: gray;
+}
+
+/********************************************
+Layout Rule
+**********************************************/
+.wrap{
+    max-width: 1200px;
+    width: 100%;
+    padding: 0 5% 0 5%;
+    text-align: center;
+   
+}
+.gallery-2{
+    display: inline-block;
+    width: 47%;
+    margin: 20px 5px 10px 5px;
+
+}
+
+/************************************************
+Components
+************************************************/
+
+.drop{
+    position: relative;
+    display: none;
+    background-color: sienna;
+    right: 10px;
+    width: 100%;
+    height: 40px;
+    border: none;
+    cursor: pointer;
+}
+
+.button {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    background: url('https://i.ibb.co/Rj4Nz3T/menu-button.png') no-repeat;
+    background-size: contain;
+}
+.menu-list{
+    position: relative;
+   
+}
+.menu{
+    display: inline-block;
+    
+    list-style: none;
+    width: 100%;
+    
+   
+}
+
+.menu a{
+    float: right;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: wheat;
+    padding: 2% 5% 2% 5%;
+}
+
+/***********************************************
+Modules
+***********************************************/
+.header{
+    
+    background-color: sienna;
+    padding: 2% 0 4% 0;
+    
+    /******** nu mi-a luat background color**************/
+
+}
+
+.image img{
+    width: 1200px;
+    max-width: 100%;
+}
+.about{
+    padding-top: 20px;
+}
+.gallery img{
+    display: inline-block;
+    width: 32.3334%;
+    height: 50%;
+}
+
+@media screen (min-width: 960px) {
+    .drop {
+        display: none;
+    }
+    .menu{
+        display: inline;
+        position: relative;
+    }
+}
+
+@media screen and (max-width: 650px) {
+        .menu {
+              display: none;
+              position: relative;
+          }
+        /**********
+          .menu a {
+          display: inline-block;
+        }
+        *******************************/
+      .drop  {
+          display: inline;
+      }
+}
